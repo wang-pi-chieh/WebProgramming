@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學生註冊</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            /* margin: 0; */
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+        }
+        input, select, button {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>學生註冊</h1>
+    <form action="studentRegister.php" method="post">
+        <input type="text" name="account" placeholder="帳號" required>
+        <input type="password" name="password" placeholder="密碼" required>
+        <input type="text" name="name" placeholder="姓名" required>
+        <input type="text" name="major" placeholder="科系" required>
+        <input type="text" name="sid" placeholder="學號" required>
+        <input type="text" name="phone" placeholder="電話" required>
+        <input type="email" name="mail" placeholder="電子郵件" required>
+        <select name="MorV" required>
+            <option value="" disabled selected>請選擇飲食習慣</option>
+            <option value="葷">葷食</option>
+            <option value="素">素食</option>
+        </select>
+        <button type="submit">註冊</button>
+    </form>
+</body>
+</html>
